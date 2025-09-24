@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin-top: 250px;
+    }
+    #clear{
+        width:245px;
+    }
+    .formstyle{
+        height: 290px;
+        width: 261px;
+        margin: auto;
+        border: 2px solid black;
+       
+    }
+    input{
+        width: 75px;
+        background-color: black;
+        color: white;
+        margin-left: 5px;
+        margin-bottom: 5px;
+        padding: 7px;
+        font-size: 15px;
+
+
+    }
+    input:hover{
+background-color: rgb(233, 202, 101);
+color: black;
+ }
+
+    #answerstyle{
+        width: 225px;
+        margin-left: 5px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+
+</style>
+<body>
+    <div class="formstyle">
+        <form name="forms">
+            <input type="text" name="answer" id="answerstyle">
+            <input type="button" value="1" onclick="forms.answer.value +=1">
+            <input type="button" value="2" onclick="forms.answer.value +=2">
+            <input type="button" value="3" onclick="forms.answer.value +=3">
+
+            <input type="button" value="4" onclick="forms.answer.value +=4">
+            <input type="button" value="5" onclick="forms.answer.value +=5">
+            <input type="button" value="6" onclick="forms.answer.value +=6">
+
+            <input type="button" value="7" onclick="forms.answer.value +=7">
+            <input type="button" value="8" onclick="forms.answer.value +=8">
+            <input type="button" value="9" onclick="forms.answer.value +=9">
+
+            <input type="button" value="0" onclick="forms.answer.value +=0">
+            <input type="button" value="+" onclick="forms.answer.value += '+' ">
+            <input type="button" value="-" onclick="forms.answer.value += '-' ">
+            <input type="button" value="*" onclick="forms.answer.value += '*' ">
+            <input type="button" value="/" onclick="forms.answer.value += '/' ">
+
+            <input type="button" value="=" onclick="forms.answer.value = eval(forms.answer.value)">
+
+            <input type="button" value="Clear All" onclick="forms.answer.value =''" id="clear">
+
+
+
+
+
+
+
+            
+        </form>
+    </div>
+</body>
+</html>

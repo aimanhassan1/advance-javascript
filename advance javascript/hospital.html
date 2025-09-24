@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+    </style>
+</head>
+
+<body>
+    <h2>Haelam hospital</h2>
+    <form>
+    <h5>PATIENT INFORMATION</h5>
+
+    <input type="text" placeholder="patient name" id="pn"  > <br>
+    <input type="text" placeholder="Patient id (frist 5 no)" id="pid" > <br>
+    <input type="text" placeholder="Date of servies (date/month/year) " id="dos" > <br> 
+</form>
+<form>
+<h5>SERVICES CHARGES</h5>
+<input type="text" class="form-control" id="Input1" placeholder="Doctor Fees$1000 " disabled> <br>
+<input type="text" class="form-control" id="Input2" placeholder="EmergencyRoomVisit" > <br>
+<input type="text" class="form-control" id="Input3"  placeholder="X-Ray Fees" > <br>
+<input type="text" class="form-control" id="Input4"  placeholder="Lab Test" > <br>
+<input type="text" class="form-control" id="Input5"  placeholder="Medication:" > <br>
+<input type="text" class="form-control" id="Input6"  placeholder="Hospital room" >
+</form> 
+<button class="btn" onclick="getbill()">Get Bill</button>
+<div class="snow">
+    <div class="name1"></div>
+    <div class="id1"></div>
+    <div class="date1"></div>
+    <div class="result"></div>
+</div>
+<script>
+    const getbill=()=>{
+        let name = document.getElementById("pn").value;
+        let id = document.getElementById("pid").value;
+        let date = document.getElementById("dos").value;
+
+        let I1 = 1000;
+        let I2 = Number.parseInt(document.getElementById("Input2").value);
+        let I3 = Number.parseInt(document.getElementById("Input3").value);
+        let I4 = Number.parseInt(document.getElementById("Input4").value);
+        let I5 = Number.parseInt(document.getElementById("Input5").value);
+        let I6 = Number.parseInt(document.getElementById("Input6").value);
+
+        let T = I1 + I2 + I3 + I4 + I5 + I6;
+
+        document.getElementById("name1").innerHTML = "patient name:" +name;
+        document.getElementById("id1").innerHTML = "Patient id:"+ id ;
+        document.getElementById("date1").innerHTML = " Date of servies:   "+date ;
+        document.getElementById("result").innerHTML = "Your total bill: "+ T +"$";
+
+
+
+    }
+</script>
+</body>
+</html>

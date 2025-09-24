@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="myInput" onkeyup="SearchTable()" class="SearchTable" placeholder="Search for name">
+    <table id="myTable" class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>City</th>
+
+          </tr>  
+        </thead>
+        <tbody>
+            <tr>
+           <td>aiman</td>
+           <td>21</td>
+           <td>Karachi</td>
+
+           
+
+            </tr>
+              <tr>
+            <td>Ali</td>
+            <td>33</td>
+            <td>Karachi</td>
+
+            </tr>
+              <tr>
+            <td>Fatima</td>
+            <td>54</td>
+            <td>Karachi</td>
+
+            </tr>
+              <tr>
+            <th>Hamza</th>
+            <th>22</th>
+            <th>lahore</th>
+
+            </tr>
+              <tr>
+            <td>Ahmed</td>
+            <td>44</td>
+            <td>Karachi</td>
+
+            </tr>
+              <tr>
+            <td>Waqar</td>
+            <td>76</td>
+            <td>Karachi</td>
+
+            </tr>
+              <tr>
+            <td>Hiba</td>
+            <td>21</td>
+            <td>Karachi</td>
+
+            </tr>
+            
+        </tbody>
+    </table>
+    <script>
+        function SearchTable(){
+            var input,filter,table,tr,td,i,txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+
+            for(i=0; i<tr.length; i++){
+                td = tr[i].getElementsByTagName("td");
+                
+            for(j=0; j<td.length; j++){
+                txtValue = td[j].textContent || td [j].innerHTML;
+
+                if(txtValue.toUpperCase().indexOf(filter) > -1){
+                    tr[i].style.display= "";
+                    break;
+                }
+                else{
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+
+    </script>
+</body>
+</html>

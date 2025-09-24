@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><div class="demo">
+    <h1>Toggle background color</h1>
+    <button id="toggle-btn" >Toggle btn</button>
+    <div class="container">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt fuga cumque molestias quas eos eaque mollitia blanditiis dolorem rem natus repellendus doloremque dignissimos architecto quisquam laborum beatae, accusamus culpa. Illum.
+    </div>
+    <div class="container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque corporis fugiat quas sed odio mollitia facilis nesciunt itaque vero cum dicta aliquid unde doloribus beatae quod nulla consectetur, blanditiis eaque!</div>
+    <div class="container">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate placeat odio itaque, exercitationem officia facere iste sed, quam deleniti quos ipsum libero eum! Quae praesentium eos dicta est aut. Laboriosam?</div>
+
+</div>
+<script>
+    const togglebtn = document.querySelector('#toggle-btn');
+    const body = document.querySelector('body');
+    togglebtn.addEventListener('click',function(){
+        if(body.style.backgroundColor === 'pink'){
+        (body.style.backgroundColor = 'purple')
+        (body.style.color = 'pink')
+        }
+        else{
+            body.style.backgroundColor = 'pink';
+            body.style.color = 'purple';
+
+
+        }
+
+    });
+</script>
+</body>
+</html>

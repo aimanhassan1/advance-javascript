@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table{
+        border: 2px solid black;
+        height: 300px;
+       width: 90px;
+
+    }
+    input{
+        padding: 10px;
+    }
+
+    td{
+        border: 2px solid black;
+    }
+       
+    .btn{
+        padding: 5px;
+        margin-left:20px ;
+        background-color: black;
+        color: wheat;
+    }
+   
+</style>
+<body>
+    <div class="div">
+
+    
+    <table>
+<tr>    <td> kilogram</td> 
+    <td> <input type="text" id="kg"> <br>
+        <button class="btn" onclick="convert()">Show value</button> </td>
+ </tr>
+<tr>
+    <td>pounds</td>
+<td><input type="text" id="pd" disabled></td>
+</tr>
+<tr>
+    <td>miligram</td>
+ <td><input type="text" id="mg" disabled></td>
+</tr>
+<tr>
+    
+<td>tonne</td>
+<td><input type="text" id="tn" disabled></td>
+</tr>
+<tr>
+    <td>Ounce</td>
+    <td><input type="text" id="on" disabled></td>
+        
+</tr>
+
+
+
+
+
+
+
+    </table></div>
+    <script>
+        function convert(){
+            var k = document.getElementById('kg').value;
+            var ponds = k *2.2046;
+            var milligram =k *10000;
+            var ton = k *0.0011023;
+            var on = k *35.274;
+
+        var pd = document.getElementById('pd').value = ponds;
+        var mg = document.getElementById('mg').value = milligram;
+        var t = document.getElementById('tn').value = ton;
+        var on = document.getElementById('on').value = on ;
+    }
+
+
+    </script>
+</body>
+</html>
